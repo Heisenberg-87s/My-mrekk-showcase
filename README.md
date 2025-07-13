@@ -2,4 +2,4 @@
 
 > Web project showing off Mrekk's score in osu!
 
-🌐 Live demo: [https://osu-react-showcase.vercel.app](https://osu-react-showcase.vercel.app)
+🌐 Live demo: https://my-mrekk-showcase.vercel.app
