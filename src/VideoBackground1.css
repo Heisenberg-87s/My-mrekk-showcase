@@ -1,0 +1,83 @@
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.5);
+    /* ทำให้ text อ่านง่ายขึ้น */
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    text-align: center;
+    padding-top: 30vh;
+    font-family: sans-serif;
+
+}
+
+.slide-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 1s ease-out forwards;
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fast-slide {
+    opacity: 0;
+    transform: translateY(100px);
+    animation: Fslide 1s ease-out forwards;
+}
+
+@keyframes Fslide {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.content-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem;
+  gap: 0px;
+  flex-wrap: wrap; /* 👈 ถ้าแคบเกินจะลงบรรทัดใหม่อัตโนมัติ */
+}
+
+.text-side {
+  flex: 1;
+  min-width: 250px;
+}
+
+.image-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-side img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
